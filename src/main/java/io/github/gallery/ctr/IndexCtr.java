@@ -22,6 +22,7 @@ public class IndexCtr {
     private static final Log logger = LogFactory.getLog(IndexCtr.class);
 
     @GetMapping("/")
+    @ResponseBody
     public String index() {
         return "log";
     }
