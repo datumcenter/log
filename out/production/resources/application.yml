@@ -1,0 +1,23 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/db?useUnicode=true&useSSL=false&characterEncoding=utf-8
+    username: root
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+rabbitmq:
+  host: localhost
+  port: 15672
+  username: mq
+  password: nimda
+db:
+  info:
+    deafult-db: db
+    platform: mysql
+logging:
+  level:
+    io:
+      gallery: DEBUG
