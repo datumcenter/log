@@ -18,7 +18,8 @@ spring:
       simple:
         concurrency: 1
         max-concurrency: 20
-        acknowledge-mode: auto
+        #消息接收确认 auto|manual
+        acknowledge-mode: manual
 db:
   info:
     deafult-db: db

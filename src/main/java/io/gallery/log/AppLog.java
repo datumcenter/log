@@ -1,4 +1,4 @@
-package io.github.gallery;
+package io.gallery.log;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
