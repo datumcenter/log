@@ -1,10 +1,12 @@
 server:
   port: 80
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db?useUnicode=true&useSSL=false&characterEncoding=utf-8&serverTimezone=UTC
     password: root
-    url: jdbc:mysql://localhost:3306/db?useUnicode=true&useSSL=false&characterEncoding=utf-8
     username: root
   resources:
     static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
@@ -24,7 +26,10 @@ db:
   info:
     deafult-db: db
     platform: mysql
+    #tree-column: pid
+    #error-where: true
+    column-all: false
+    column-case: lower
 logging:
   level:
-    io:
-      gallery: DEBUG
+    io.gallery.db: DEBUG

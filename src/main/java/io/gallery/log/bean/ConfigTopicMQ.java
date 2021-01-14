@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * 主题交换机
  */
 @Configuration
-public class TopicMQConfig {
+public class ConfigTopicMQ {
 
     //绑定键
     public final static String add = "log.add";

@@ -27,7 +27,8 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly 'org.springframework.boot:spring-boot-starter-amqp'
-    //compileOnly 'io.github.datumcenter:gallery-util:0.0.1'
+    compileOnly 'io.github.datumcenter:gallery-util:0.0.1'
+    compile project(':db')
 
 }
 

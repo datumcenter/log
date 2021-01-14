@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * 扇型交换机
  */
 @Configuration
-public class FanoutMQConfig {
+public class ConfigFanoutMQ {
 
     @Bean
     public Queue queueLogin() {

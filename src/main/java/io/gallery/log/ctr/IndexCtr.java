@@ -1,5 +1,7 @@
 package io.gallery.log.ctr;
 
+import io.gallery.db.bean.DataBaseConfig;
+import io.gallery.db.util.DB;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -23,18 +25,20 @@ public class IndexCtr implements Serializable {
     private static final Log logger = LogFactory.getLog(IndexCtr.class);
     @Autowired
     RabbitTemplate rabbitTemplate;
+    @Autowired
+    DataBaseConfig dataBaseConfig;
 
     @GetMapping("/")
     @ResponseBody
-    public String index() {
-        return "log";
+    public Object index() {
+        return DB.selectOne("select now()");
     }
 
 
     @GetMapping("/config")
     @ResponseBody
     public Object config(@RequestParam Map<String, Object> params) {
-        return null;
+        return dataBaseConfig;
     }
 
     @GetMapping("/direct")

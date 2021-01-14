@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * 直连型交换机，根据消息携带的路由键将消息投递给对应队列
  */
 @Configuration
-public class DirectMQConfig {
+public class ConfigDirectMQ {
 
     @Bean
     public Queue logDirectQueue() {
