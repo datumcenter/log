@@ -50,7 +50,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId "io.github.datumcenter"
-            artifactId "${archivesBaseName}"
+            artifactId "gallery-log"
             version "${version}"
             from components.java
             artifact sourcesJar
